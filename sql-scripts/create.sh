@@ -1,1 +1,0 @@
-sudo -u postgres psql postgres -f parameters.sql -f create_db.sql 

@@ -1,7 +1,0 @@
-<?php
-//session_start();
-//$dbconn = pg_connect("host=localhost dbname=sql_injection user=sql_injection password=47002")
-//   or die('Impossibile connettersi al database: ' . pg_last_error());
-
-echo "hello word!"
-?> 

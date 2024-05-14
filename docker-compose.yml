@@ -6,12 +6,17 @@ services:
     ports:
       - "8080:80"
     depends_on:
-      - db
+      - mysql
 
-  db:
-    image: postgres:latest
+
+  mysql:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
     environment:
-      POSTGRES_PASSWORD: inject
-      POSTGRES_DB: sql_injection
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sql_injection
+      MYSQL_USER: sql_injection
+      MYSQL_PASSWORD: inject
     volumes:
-      - ./scripts:/docker-entrypoint-initdb.d
+      - ./mysql/data:/var/lib/mysql
