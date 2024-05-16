@@ -7,5 +7,6 @@ Homework per il corso di sicurezza a.a. 2023/2024 su SQL Injection
 #comando injection
     " ' or 1=1 #"
     " lgo' union select matricola, pass from studente # "
+    " via'); drop table esame; # "
 
 #la funzione sqli non può supportare più query

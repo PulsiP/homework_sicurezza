@@ -23,6 +23,7 @@ require_once "conn.php";
   <body>
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand text-white">Safe Site</a>
+      <a class="navbar-brand text-white" href="profile.php">Profilo</a>
       <div class="d-flex align-items-center">
         <a href="logout.php" class="btn btn-link px-3 me-2 text-white">
           Logout
@@ -33,8 +34,8 @@ require_once "conn.php";
     <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Benvenuto <?php echo $_SESSION["matricola"]; ?></h1>
-          <p class="lead text-muted">Pagina per visualizzare gli esami sostenuti</p>
-          <form class="form-inline" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+          <p class="lead text-muted">Visualizza i corsi disponibili</p>
+          <form class="form-inline justify-content-center" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <div class="form-group mx-sm-3 mb-2">
               <label for="inputPassword2" class="sr-only">Corso di studi</label>
               <input type="text" class="form-control" id="corso" name="corso" placeholder="corso di studi">
