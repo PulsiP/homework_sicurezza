@@ -1,8 +1,8 @@
 <?php
-/* Initialize the session */
+/* Inizializza la sessione */
 session_start();
 
-/* Check if the user is logged in, if not then redirect him to login page */
+/* Controllo del login */
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   header("location: index.php");
   exit;
@@ -70,7 +70,7 @@ require_once "conn.php";
                 echo $error = "Operazione non riuscita!";
             }
 
-            /* Close statement */
+            /* Chiudi connessione */
             mysqli_close($conn);
           }
           else {

@@ -31,19 +31,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       if (mysqli_num_rows($result) > 0)
       {
 
-          /* Store data in session variables */
+          /* Salvo i dati nelle varabiloi di sessione */
           $_SESSION["loggedin"] = true;
           $_SESSION["matricola"] = $matricola;
 
-          /* Redirect user to welcome page */
+          /* Ridirezionamento alla pagina home */
           header("location: home.php");
       }
       else
       {
-          /* Display an error message if there is no row selected. */
+          /* Erorre se le credenziali non sono valide */
           $err = "Credenziali non valide";
       }
-      /* Close statement */
+      /* Chiusura connesione */
       mysqli_close($conn);
   }
 
